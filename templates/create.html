@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form method='POST' action='/search4'>
+    <table>
+        <p>Use this form to submit a search request:</p>
+        <tr>
+            <td>
+            Phrase:
+            </td>
+            <td>
+                <input name='phrase' type='TEXT' width='60'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Letters:
+            </td>
+            <td>
+                <input name='letters' type='TEXT' value='aeiou'>
+            </td>
+        </tr>
+    </table>
+    <p>
+        When you're ready, click this button:
+    </p>
+    <p>
+        <input value='Do it!' type='SUBMIT'>
+    </p>
+</form>
+
+<!--<h2>-->
+<!--    {{ the_title }}-->
+<!--</h2>-->
+<!--<p>-->
+<!--    You submitted the following data:-->
+<!--</p>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            Phrase:-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ the_phrase }}-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            Letters:-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ the_letters }}-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!--<p>-->
+<!--    When "{{ the_phrase }}" is search for "{{ the_letters }}", the following results are returned:-->
+<!--</p>-->
+<!--<h3>-->
+<!--    {{ the_results }}-->
+<!--</h3>-->
+
+{% endblock %}
