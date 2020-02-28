@@ -4,15 +4,29 @@
 
 <h2>{{ the_title }}</h2>
 
-<form method='POST' action='/search4'>
+<form method='POST' action='/status_login'>
     <table>
+        <p>Login</p>
         <tr>
-            Hello
+            <td>
+            Username:
+            </td>
+            <td>
+                <input name='username' type='TEXT' width='60'>
+            </td>
         </tr>
         <tr>
-
+            <td>
+                Password:
+            </td>
+            <td>
+                <input name='password' type='TEXT'>
+            </td>
         </tr>
     </table>
+    <p>
+        <input value='OK!' type='SUBMIT'>
+    </p>
 </form>
 
 {% endblock %}
