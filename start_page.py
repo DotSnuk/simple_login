@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 
 login_app = Flask(__name__)
+dict_from_file = {}
 
 def check_username(usern, passw) -> 'bool':
     # will keep the logins as a dictionaries within a dictionary.
@@ -8,15 +9,19 @@ def check_username(usern, passw) -> 'bool':
     # and in the second dict keep the username as the key, and the password as the value
     # will need to edit this to check for that
     with open('logins.txt') as logs:
-        if usern not in logs:
-            add_username(usern, passw)
-            return True
-        else:
-            return False
+        for line in logs:
+            if ' ' in line:
+                key, value = line.split(' ', 1)
+                dict_from_file[key] = value
+    if usern not in dict_from_file.keys():
+        add_username(usern, passw)
+        return True
+    else:
+        return False
 
 def add_username(usern, passw):
     with open('logins.txt', 'a') as txtfile:
-        print({usern: passw}, file=txtfile)
+        print(usern, passw, file=txtfile)
         # TODO: will need to add it to the list of username.
         # lets see how it looks after I have added a few
 
