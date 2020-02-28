@@ -2,15 +2,15 @@
 
 {% block body %}
 
-<form method='POST' action='/search4'>
+<form method='POST' action='/status'>
     <table>
-        <p>Use this form to submit a search request:</p>
+        <p>Create account</p>
         <tr>
             <td>
-            Phrase:
+            Username:
             </td>
             <td>
-                <input name='phrase' type='TEXT' width='60'>
+                <input name='username' type='TEXT' width='60'>
             </td>
         </tr>
         <tr>
@@ -18,15 +18,12 @@
                 Letters:
             </td>
             <td>
-                <input name='letters' type='TEXT' value='aeiou'>
+                <input name='password' type='TEXT'>
             </td>
         </tr>
     </table>
     <p>
-        When you're ready, click this button:
-    </p>
-    <p>
-        <input value='Do it!' type='SUBMIT'>
+        <input value='OK!' type='SUBMIT'>
     </p>
 </form>
 

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>
+    {{ the_title }}
+</h2>
+{% if check %}
+
+<p>
+    Congratulations! You have added {{ username }} as a user!
+</p>
+
+{% else %}
+
+<p>
+    Sorry, {{ username }} is already added as a user.
+</p>
+
+{% endif %}
+
+{% endblock %}
